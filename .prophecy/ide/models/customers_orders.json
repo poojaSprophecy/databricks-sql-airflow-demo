@@ -7,6 +7,12 @@
     "sourceSuggestions" : {
       "sources" : [ ]
     },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
     "version" : 3
   },
   "processes" : {
