@@ -99,6 +99,11 @@
                 "type" : "String"
               }
             }, {
+              "name" : "country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
               "name" : "phone",
               "dataType" : {
                 "type" : "String"
@@ -107,55 +112,6 @@
               "name" : "email",
               "dataType" : {
                 "type" : "String"
-              }
-            }, {
-              "name" : "country_code",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "account_open_date",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "account_flags",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
-          "orders" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            }, {
-              "name" : "Status",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "Department",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Double"
               }
             } ]
           },
@@ -447,6 +403,14 @@
         "children" : [ ]
       }, {
         "type" : "Schema",
+        "name" : "refresh_schema_new_1",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "refresh_schema_new_123",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
         "name" : "sparklearnerdev",
         "children" : [ ]
       } ]
@@ -457,6 +421,10 @@
     }, {
       "type" : "Catalog",
       "name" : "main",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "qa-team",
       "children" : [ ]
     }, {
       "type" : "Catalog",
@@ -473,9 +441,18 @@
     "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ {
-    "name" : "customers_orders_update",
+    "name" : "customers_orders",
     "type" : "Model",
     "syncedOnce" : false
+  }, {
+    "name" : "orders_summary",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "customers",
+    "type" : "Source",
+    "sourceName" : "hive_metastore.pooja",
+    "syncedOnce" : true
   } ],
   "frontEndLanguage" : "sql"
 }

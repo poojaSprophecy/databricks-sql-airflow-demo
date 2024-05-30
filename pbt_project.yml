@@ -8,7 +8,30 @@ buildSystemDetails: null
 pipelines: {}
 datasets: {}
 templates: {}
-jobs: {}
+jobs:
+  jobs/test1:
+    name: test1
+    description: ''
+    fabricUID: 8
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-05-29 10:56:33'
+    author: ashish@prophecy.io
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
@@ -24,8 +47,8 @@ functions:
   businessRules: {}
 subgraphs: {}
 sqlModels:
-  .prophecy/metadata/sqlmodels/customers_orders_update:
-    name: customers_orders_update
+  .prophecy/metadata/sqlmodels/customers_orders:
+    name: customers_orders
     schema:
       providerType: Databricks
       fields:
@@ -44,15 +67,44 @@ sqlModels:
     description: null
     author: ashish@prophecy.io
     files:
-    - models/customers_orders_update.sql
-    - .prophecy/ide/models/customers_orders_update.json
+    - models/customers_orders.sql
+    - .prophecy/ide/models/customers_orders.json
     sqlDependencies:
       models: []
       datasets: []
       seeds: []
       sources: []
       snapshots: []
-    createdAt: '2024-05-29 06:45:32'
+    createdAt: '2024-05-30 08:28:08'
+  .prophecy/metadata/sqlmodels/orders_summary:
+    name: orders_summary
+    schema:
+      providerType: Databricks
+      fields:
+      - name: total_orders
+        dataType:
+          type: Bigint
+      - name: total_amount
+        dataType:
+          type: Bigint
+      - name: date
+        dataType:
+          type: String
+      - name: unique_customers
+        dataType:
+          type: Bigint
+    description: null
+    author: ashish@prophecy.io
+    files:
+    - models/orders_summary.sql
+    - .prophecy/ide/models/orders_summary.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-30 08:36:48'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros: {}
@@ -119,6 +171,31 @@ sqlSources:
       description: null
       author: ashish@prophecy.io
       createdAt: '2024-05-29 06:46:19'
+    - name: orders
+      schema:
+        providerType: databricks
+        fields:
+        - name: order_id
+          dataType:
+            type: Bigint
+        - name: customer_id
+          dataType:
+            type: Bigint
+        - name: Status
+          dataType:
+            type: String
+        - name: Department
+          dataType:
+            type: String
+        - name: order_date
+          dataType:
+            type: Date
+        - name: amount
+          dataType:
+            type: Double
+      description: null
+      author: ashish@prophecy.io
+      createdAt: '2024-05-30 07:22:50'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline

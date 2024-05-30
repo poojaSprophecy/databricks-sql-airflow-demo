@@ -50,3 +50,23 @@ sources:
     - name: "amount"
       dataType:
         type: "Integer"
+  - name: "orders"
+    columns:
+    - name: "order_id"
+      dataType:
+        type: "Bigint"
+    - name: "customer_id"
+      dataType:
+        type: "Bigint"
+    - name: "Status"
+      dataType:
+        type: "String"
+    - name: "Department"
+      dataType:
+        type: "String"
+    - name: "order_date"
+      dataType:
+        type: "Date"
+    - name: "amount"
+      dataType:
+        type: "Double"
