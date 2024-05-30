@@ -9,6 +9,7 @@
     },
     "graphConfig" : {
       "entityConfig" : {
+        "materialized" : "table",
         "type" : "ModelConfig"
       }
     },
