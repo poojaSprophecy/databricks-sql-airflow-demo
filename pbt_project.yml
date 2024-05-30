@@ -32,6 +32,7 @@ jobs:
     enabled: null
     createdAt: '2024-05-29 10:56:33'
     author: ashish@prophecy.io
+    models: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''

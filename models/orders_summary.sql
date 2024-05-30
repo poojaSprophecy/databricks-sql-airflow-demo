@@ -1,8 +1,4 @@
-{{
-  config({    
-    "materialized": "table"
-  })
-}}
+
 
 WITH orders_new AS (
 

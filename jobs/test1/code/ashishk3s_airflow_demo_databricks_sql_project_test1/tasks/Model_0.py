@@ -5,14 +5,6 @@ def Model_0():
     import os
     import zipfile
     import tempfile
-    envs = {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy"}
-    dbt_props_cmd = ""
-
-    if "/home/airflow/gcs/data":
-        envs = {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
-
-    if "run_profile_admin":
-        dbt_props_cmd = " --profile run_profile_admin"
 
     return BashOperator(
         task_id = "Model_0",
@@ -26,8 +18,8 @@ def Model_0():
                )
              ),
              ""
-           ),            "dbt seed" + dbt_props_cmd,  "dbt test" + dbt_props_cmd]
+           ),            "dbt seed --profile run_profile_admin -m orders_summary",            "dbt test --profile run_profile_admin -m orders_summary"]
         ),
-        env = envs,
+        env = {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
         append_env = True,
     )
