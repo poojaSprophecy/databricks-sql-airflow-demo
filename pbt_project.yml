@@ -32,7 +32,6 @@ jobs:
     enabled: null
     createdAt: '2024-05-29 10:56:33'
     author: ashish@prophecy.io
-    models: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
@@ -122,78 +121,21 @@ sqlSources:
     - name: customers
       schema:
         providerType: databricks
-        fields:
-        - name: customer_id
-          dataType:
-            type: String
-        - name: first_name
-          dataType:
-            type: String
-        - name: last_name
-          dataType:
-            type: String
-        - name: phone
-          dataType:
-            type: String
-        - name: email
-          dataType:
-            type: String
-        - name: country_code
-          dataType:
-            type: String
-        - name: account_open_date
-          dataType:
-            type: String
-        - name: account_flags
-          dataType:
-            type: String
+        fields: []
       description: null
       author: ashish@prophecy.io
       createdAt: '2024-05-29 06:45:48'
     - name: orders_new
       schema:
         providerType: databricks
-        fields:
-        - name: order_id
-          dataType:
-            type: String
-        - name: customer_id
-          dataType:
-            type: String
-        - name: order_status
-          dataType:
-            type: String
-        - name: order_date
-          dataType:
-            type: String
-        - name: amount
-          dataType:
-            type: Integer
+        fields: []
       description: null
       author: ashish@prophecy.io
       createdAt: '2024-05-29 06:46:19'
     - name: orders
       schema:
         providerType: databricks
-        fields:
-        - name: order_id
-          dataType:
-            type: Bigint
-        - name: customer_id
-          dataType:
-            type: Bigint
-        - name: Status
-          dataType:
-            type: String
-        - name: Department
-          dataType:
-            type: String
-        - name: order_date
-          dataType:
-            type: Date
-        - name: amount
-          dataType:
-            type: Double
+        fields: []
       description: null
       author: ashish@prophecy.io
       createdAt: '2024-05-30 07:22:50'
