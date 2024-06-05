@@ -33,6 +33,54 @@ jobs:
     createdAt: '2024-05-29 10:56:33'
     author: ashish@prophecy.io
     models: []
+  jobs/demo-job:
+    name: demo-job
+    description: ''
+    fabricUID: 8
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-06-04 10:24:59'
+    author: ashish@prophecy.io
+    models: []
+  jobs/dmeo-job2:
+    name: dmeo-job2
+    description: ''
+    fabricUID: 8
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2024-06-04 15:39:44'
+    author: ashish@prophecy.io
+    models: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''

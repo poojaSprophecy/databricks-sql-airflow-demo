@@ -1,4 +1,4 @@
-from ashishk3s_airflow_demo_databricks_sql_project_test1.utils import *
+from ashishk3s_airflow_demo_databricks_sql_project_dmeo_job2.utils import *
 
 def Model_0():
     from airflow.operators.bash import BashOperator
@@ -18,7 +18,7 @@ def Model_0():
                )
              ),
              ""
-           ),            "dbt seed --profile run_profile_pooja",  "dbt run --profile run_profile_pooja",            "dbt test --profile run_profile_pooja"]
+           ),            "dbt seed --profile run_profile_pooja",  "dbt test --profile run_profile_pooja"]
         ),
         env = {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
         append_env = True,

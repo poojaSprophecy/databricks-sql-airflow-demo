@@ -2,9 +2,9 @@
   "metainfo" : {
     "type" : "Composer",
     "fabricId" : "8",
-    "jobId" : "jobs/test1",
-    "name" : "test1",
-    "dagName" : "ashishk3s_airflow_demo_databricks_sql_project_test1",
+    "jobId" : "jobs/demo-job",
+    "name" : "demo-job",
+    "dagName" : "ashishk3s_airflow_demo_databricks_sql_project_demo_job",
     "schedule" : "None",
     "enabled" : false,
     "alerting" : {
@@ -44,22 +44,22 @@
     }
   },
   "processes" : {
-    "3JyE54AwO1LI0QYk8wPVY$$k7_7SNXOl_9fvmH9dvJNa" : {
-      "id" : "3JyE54AwO1LI0QYk8wPVY$$k7_7SNXOl_9fvmH9dvJNa",
+    "mv_FLgQWy4tLQ7AX3f4nt$$adU4XQdMnnlRdRp0OB3U1" : {
+      "id" : "mv_FLgQWy4tLQ7AX3f4nt$$adU4XQdMnnlRdRp0OB3U1",
       "component" : "Model",
       "metadata" : {
         "label" : "Model_0",
         "slug" : "Model_0",
-        "x" : -280,
-        "y" : -40
+        "x" : -260,
+        "y" : -100
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "A3Bjbwb9vs8zCx7i0NY01$$1wjXZbIfE5Esy84Tci4JN",
+          "id" : "RBnJ8mfu-AV-khcqyarpl$$0fGBgAaZ1iVcXrW9hlXJh",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "j6wU488AMEKch6f7DSm7h$$-tU5jOmCzm7tMpg5rVO7t",
+          "id" : "BnSwvYlLbfna3HKzV4sMZ$$cvp2szYt6jbLc83wHURB1",
           "slug" : ""
         } ]
       },
@@ -73,7 +73,7 @@
         "runSeed" : true,
         "gitEntity" : "branch",
         "noPartialParse" : null,
-        "model" : "orders_summary",
+        "model" : null,
         "warnErrorOptions" : null,
         "gitTokenSecret" : null,
         "state" : null,
@@ -82,7 +82,7 @@
         "gitSshUrl" : null,
         "indirectSelection" : null,
         "partialParse" : null,
-        "runRun" : true,
+        "runRun" : null,
         "vars" : null,
         "isAdhocRunFromSameProject" : null,
         "runSnapshots" : null,
@@ -129,7 +129,49 @@
       },
       "connections" : [ ],
       "processes" : { }
+    },
+    "1__NQCQubdYolX0yDA7NV$$kimpNGw8rR7CvkwKd6RUs" : {
+      "id" : "1__NQCQubdYolX0yDA7NV$$kimpNGw8rR7CvkwKd6RUs",
+      "component" : "TableauExtract",
+      "metadata" : {
+        "label" : "TableauExtract_1",
+        "slug" : "TableauExtract_1",
+        "x" : -60,
+        "y" : -100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uBbFRH2xXlfrMrD1sBcFG$$bR-1w9HElkWOhekfJ7WbM",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "O_t6CtZEO4uf_2MMlc11Z$$ve4z3pCrRQhHwDe_7cne0",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "table_name" : "customers_orders",
+        "tableau_project_name" : "Customer Orders",
+        "catalog_name" : "hive_metastore",
+        "databricks_conn_id" : null,
+        "source_type" : "DATABRICKS",
+        "use_catalog" : true,
+        "database_name" : "pooja",
+        "tableau_conn_id" : "tableau_ashish",
+        "warehouse_conn_id" : "dev_databricks_admin",
+        "tableau_extract_name" : "customers_orders_update_interim",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
     }
   },
-  "connections" : [ ]
+  "connections" : [ {
+    "id" : "rx681ADvrMgFW-KwoWnye$$bBi5ZPoai6I6yiq0Js4Ja",
+    "source" : "mv_FLgQWy4tLQ7AX3f4nt$$adU4XQdMnnlRdRp0OB3U1",
+    "target" : "1__NQCQubdYolX0yDA7NV$$kimpNGw8rR7CvkwKd6RUs",
+    "sourcePort" : "BnSwvYlLbfna3HKzV4sMZ$$cvp2szYt6jbLc83wHURB1",
+    "targetPort" : "uBbFRH2xXlfrMrD1sBcFG$$bR-1w9HElkWOhekfJ7WbM"
+  } ]
 }
